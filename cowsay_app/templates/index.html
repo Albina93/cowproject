@@ -1,0 +1,8 @@
+<h1 style="text-align: center; font-size: 40px; background-color: rgb(133, 226, 133);">Hello Cow</h1>
+<a href="/recent/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Recent Text</a>
+<pre style="color: red; font-weight: bold; font-size: 30px;">{{ cowsaid }}</pre>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input class="btn btn-primary" type="submit" value="Submit">
+</form>
