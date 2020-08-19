@@ -12,8 +12,8 @@ def index(request):
         form = AddTextForm(request.POST)
         if form.is_valid():
             data = form.cleaned_data
-            Text_Result.objects.create(text=data.get("text"))
             text = data.get("text")
+            Text_Result.objects.create(text=text)
             cowsaid = subprocess.check_output(
                 ["cowsay", text], text=True)
 
