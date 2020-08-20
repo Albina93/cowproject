@@ -22,5 +22,5 @@ def index(request):
 
 
 def recent(request):
-    cow_text = Text_Result.objects.all().order_by('-id')[:7]
+    cow_text = Text_Result.objects.all().order_by('-id')[:10]
     return render(request, "recent.html", {"cow_text": cow_text})
